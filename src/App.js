@@ -3,8 +3,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>GitHub Pages로 리액트 프로젝트 배포</h1>
+    <div className="App flex-col items-center">
+      <h1>다연이와 락규의 모바일 청첩장</h1>
+      <div className='w-full flex justify-center'>
+        <img src={logo} className="App-logo" alt="logo" />
+      </div>
       {/* <header className="App-header">
         <div className='text-3xl font-bold'>test</div>
         <img src={logo} className="App-logo" alt="logo" />
