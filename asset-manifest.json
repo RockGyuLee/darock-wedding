@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/darock-wedding/static/css/main.9ef77096.css",
-    "main.js": "/darock-wedding/static/js/main.c02d3a8d.js",
+    "main.css": "/darock-wedding/static/css/main.52ec2a4b.css",
+    "main.js": "/darock-wedding/static/js/main.5aa1749d.js",
     "static/js/453.48a69099.chunk.js": "/darock-wedding/static/js/453.48a69099.chunk.js",
     "static/media/logo.svg": "/darock-wedding/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/darock-wedding/index.html",
-    "main.9ef77096.css.map": "/darock-wedding/static/css/main.9ef77096.css.map",
-    "main.c02d3a8d.js.map": "/darock-wedding/static/js/main.c02d3a8d.js.map",
+    "main.52ec2a4b.css.map": "/darock-wedding/static/css/main.52ec2a4b.css.map",
+    "main.5aa1749d.js.map": "/darock-wedding/static/js/main.5aa1749d.js.map",
     "453.48a69099.chunk.js.map": "/darock-wedding/static/js/453.48a69099.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ef77096.css",
-    "static/js/main.c02d3a8d.js"
+    "static/css/main.52ec2a4b.css",
+    "static/js/main.5aa1749d.js"
   ]
 }
