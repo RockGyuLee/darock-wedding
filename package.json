@@ -29,6 +29,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": "https://rmfoszld.github.io/darock-wedding/",
   "browserslist": {
     "production": [
       ">0.2%",
