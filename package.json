@@ -23,7 +23,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://rmfoszld.github.io/darock-wedding/",
   "eslintConfig": {
     "extends": [
       "react-app",
