@@ -1,16 +1,23 @@
 {
   "files": {
-    "main.css": "/darock-wedding/static/css/main.52ec2a4b.css",
-    "main.js": "/darock-wedding/static/js/main.5aa1749d.js",
-    "static/js/453.48a69099.chunk.js": "/darock-wedding/static/js/453.48a69099.chunk.js",
-    "static/media/logo.svg": "/darock-wedding/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/darock-wedding/static/css/main.c961b76e.css",
+    "main.js": "/darock-wedding/static/js/main.8bff3ff6.js",
+    "static/media/2024.jpeg": "/darock-wedding/static/media/2024.277a7ed490f0744d17dc.jpeg",
+    "static/media/2025.jpeg": "/darock-wedding/static/media/2025.d593afbbb68aa631d1c7.jpeg",
+    "static/media/2022.jpeg": "/darock-wedding/static/media/2022.4e7fc90b1a0ff70f20fb.jpeg",
+    "static/media/first_screen2.jpeg": "/darock-wedding/static/media/first_screen2.70c29a95f55c75971897.jpeg",
+    "static/media/2021.jpeg": "/darock-wedding/static/media/2021.73f2b05921bb9478b0c0.jpeg",
+    "static/media/2023.jpeg": "/darock-wedding/static/media/2023.8deea54c23bce04ded32.jpeg",
+    "static/media/main.JPG": "/darock-wedding/static/media/main.bf880b270ecb72f751f2.JPG",
+    "static/media/2019.jpeg": "/darock-wedding/static/media/2019.0c7a9b7e6da0284034c5.jpeg",
+    "static/media/2020.jpeg": "/darock-wedding/static/media/2020.aa8c255f633509bd33aa.jpeg",
+    "static/media/main3.JPEG": "/darock-wedding/static/media/main3.e4f87eed27c71807b5e6.JPEG",
     "index.html": "/darock-wedding/index.html",
-    "main.52ec2a4b.css.map": "/darock-wedding/static/css/main.52ec2a4b.css.map",
-    "main.5aa1749d.js.map": "/darock-wedding/static/js/main.5aa1749d.js.map",
-    "453.48a69099.chunk.js.map": "/darock-wedding/static/js/453.48a69099.chunk.js.map"
+    "main.c961b76e.css.map": "/darock-wedding/static/css/main.c961b76e.css.map",
+    "main.8bff3ff6.js.map": "/darock-wedding/static/js/main.8bff3ff6.js.map"
   },
   "entrypoints": [
-    "static/css/main.52ec2a4b.css",
-    "static/js/main.5aa1749d.js"
+    "static/css/main.c961b76e.css",
+    "static/js/main.8bff3ff6.js"
   ]
 }
