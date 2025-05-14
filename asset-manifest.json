@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/darock-wedding/static/css/main.c961b76e.css",
-    "main.js": "/darock-wedding/static/js/main.8bff3ff6.js",
+    "main.js": "/darock-wedding/static/js/main.bcfe54c4.js",
     "static/media/2024.jpeg": "/darock-wedding/static/media/2024.277a7ed490f0744d17dc.jpeg",
     "static/media/2025.jpeg": "/darock-wedding/static/media/2025.d593afbbb68aa631d1c7.jpeg",
     "static/media/2022.jpeg": "/darock-wedding/static/media/2022.4e7fc90b1a0ff70f20fb.jpeg",
@@ -14,10 +14,10 @@
     "static/media/main3.JPEG": "/darock-wedding/static/media/main3.e4f87eed27c71807b5e6.JPEG",
     "index.html": "/darock-wedding/index.html",
     "main.c961b76e.css.map": "/darock-wedding/static/css/main.c961b76e.css.map",
-    "main.8bff3ff6.js.map": "/darock-wedding/static/js/main.8bff3ff6.js.map"
+    "main.bcfe54c4.js.map": "/darock-wedding/static/js/main.bcfe54c4.js.map"
   },
   "entrypoints": [
     "static/css/main.c961b76e.css",
-    "static/js/main.8bff3ff6.js"
+    "static/js/main.bcfe54c4.js"
   ]
 }
