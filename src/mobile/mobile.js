@@ -1,7 +1,8 @@
 import firstScreen2 from "../img/first_screen2.jpeg";
 
 import React from "react";
-import {  Invitations } from "./second";
+// import {  Invitations } from "./second";
+import { Invitations } from "./invitations";
 import { WeddingGallery } from "./third";
 
 export function Mobile({scrollY}){
@@ -42,6 +43,8 @@ export function Mobile({scrollY}){
             </div>
         </div>
         <Invitations scrollY={scrollY}/>
-        <WeddingGallery />
+        {/* <Invitations scrollY={scrollY}/> */}
+
+        {/* <WeddingGallery /> */}
     </div>
 }

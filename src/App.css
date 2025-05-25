@@ -19,15 +19,30 @@
 }
 
 .main {
-  height : 280vh;
+  height : 800vh;
 }
 
 .main-header {
   /* min-height : 100vh; */
   top : 0;
   position : sticky;
+
 }
 
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev {
+  @apply absolute !important;
+}
+.swiper-button-next {
+  @apply absolute !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  @apply w-8 h-8 rounded-full border p-2 bg-white !important;
+}
 
 .msMoves{
   animation : msSlider 500ms ease-out;

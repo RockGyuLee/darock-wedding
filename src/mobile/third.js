@@ -39,10 +39,7 @@ export function WeddingGallery(){
                 </div>
             </div>
             <div className='main pb-4' >
-                <ImageGallery 
-                    items={images}
-                    autoPlay={true}
-                />;
+                
             </div>
             <Map />
         </div>
