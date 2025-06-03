@@ -9,14 +9,19 @@ html {
 
 /* DeskTop */
 @media all and (min-width:720px) {
-	html{font-size:32px !important;}
+	html{font-size:24px !important;}
 	html, body{max-width:720px;margin: 0 auto;}
+}
+
+@font-face {
+  font-family : 'night';
+  src : url("./fonts/night.ttf") format('truetype');
 }
 
 body {
   margin: 0;
   height : 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'night', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

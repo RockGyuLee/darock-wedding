@@ -28,20 +28,24 @@ const images = [
 
 export function WeddingGallery(){
 
-    const mapRef = useRef(null);
-    const { naver } = window;
-
     return (
-        <div className=" z-20 absolute bg-white w-full">
+        <div className=" z-20 relative bg-white w-full pt-8">
             <div className="flex flex-col">
-                <div className="flex justify-center text-3xl text-orange-500 font-bold pb-4">
-                    " 결혼 사진첩 "
-                </div>
-            </div>
-            <div className='main pb-4' >
                 
             </div>
-            <Map />
+            <div className='main pb-4' >
+                <header className="main-header pt-4">
+                <div  className="flex-col flex-wrap justify-center">
+                    <div className="flex justify-center text-3xl text-orange-500 font-bold pb-4">
+                        웨딩 갤러리
+                    </div>
+                    <p style={{ textAlign: "center", whiteSpace: "pre-wrap" }}>
+                        test
+                    </p>
+                </div>
+            </header>
+            </div>
+            {/* <Map /> */}
         </div>
     )
 

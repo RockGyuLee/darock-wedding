@@ -79,9 +79,10 @@ function App() {
         // height: '100vh',
       }}
       />
-      {isPc && <Main scaleY={scaleY}  scrollY={userScrollY}/>}
+      <Main scaleY={scaleY}  scrollY={userScrollY}/>
+      {/* {isPc && <Main scaleY={scaleY}  scrollY={userScrollY}/>}
       {isTablet && <p>HI Tablet</p>}
-      {isMobile && <Mobile scrollY={userScrollY}/>}
+      {isMobile && <Mobile scrollY={userScrollY}/>} */}
       
       {/* <Main scaleY={scaleY}  scrollY={userScrollY}/> */}
       {/* <Main scaleY={scaleY}  scrollY={userScrollY}/> */}
