@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/darock-wedding/static/css/main.c3817993.css",
+    "main.js": "/darock-wedding/static/js/main.64855e23.js",
+    "static/media/2024.jpeg": "/darock-wedding/static/media/2024.277a7ed490f0744d17dc.jpeg",
+    "static/media/night.ttf": "/darock-wedding/static/media/night.a23d20e7fbd4eac27421.ttf",
+    "static/media/2025.jpeg": "/darock-wedding/static/media/2025.d593afbbb68aa631d1c7.jpeg",
+    "static/media/2022.jpeg": "/darock-wedding/static/media/2022.4e7fc90b1a0ff70f20fb.jpeg",
+    "static/media/mainScreen.jpg": "/darock-wedding/static/media/mainScreen.60de97f07e6cfeba4602.jpg",
+    "static/media/2021.jpeg": "/darock-wedding/static/media/2021.73f2b05921bb9478b0c0.jpeg",
+    "static/media/2023.jpeg": "/darock-wedding/static/media/2023.8deea54c23bce04ded32.jpeg",
+    "static/media/2019.jpeg": "/darock-wedding/static/media/2019.0c7a9b7e6da0284034c5.jpeg",
+    "static/media/2020.jpeg": "/darock-wedding/static/media/2020.aa8c255f633509bd33aa.jpeg",
+    "static/media/dayeon.jpeg": "/darock-wedding/static/media/dayeon.51cd8aca092e5ff3b813.jpeg",
+    "static/media/rock.jpeg": "/darock-wedding/static/media/rock.e2304a0a8446630bec1d.jpeg",
+    "index.html": "/darock-wedding/index.html",
+    "main.c3817993.css.map": "/darock-wedding/static/css/main.c3817993.css.map",
+    "main.64855e23.js.map": "/darock-wedding/static/js/main.64855e23.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c3817993.css",
+    "static/js/main.64855e23.js"
+  ]
+}
