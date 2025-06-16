@@ -19,7 +19,7 @@
 }
 
 .main {
-  height : 800vh;
+  height : 5000px;
 }
 
 .main-header {
@@ -60,4 +60,16 @@
     opacity: 1;
     filter: blur(0px);
   }
+}
+
+.fade-message {
+  opacity: 0;
+  animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
 }

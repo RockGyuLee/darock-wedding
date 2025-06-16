@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './App.css';
 import { Main } from './Main';
 import { useMediaQuery } from 'react-responsive';
@@ -7,9 +7,11 @@ import Snowfall from 'react-snowfall';
 
 import loveBlossomeImg from "./img/petal.png";
 
-
+import Mp3File from "./mp3/the-wires.mp3";
 // mobile
 import { Mobile } from './mobile/mobile';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCirclePause, faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
 
 const scaleX_1 = 100;
@@ -26,45 +28,39 @@ const loveBlossome = document.createElement('img');
 loveBlossome.src = loveBlossomeImg;
 
 function App() {
-  const [scaleY, setScaleY ] = useState(scaleY_1);
-  const [ userScrollY, setUserScrollY ] = useState(null)
+  
+  const audioRef = useRef(null);
+  const [hasPlayed, setHasPlayed]  = useState(false);
 
-  useEffect(()=> {
-    window.addEventListener("scroll", scrollProgress);
-    return () => window.removeEventListener("scroll", scrollProgress);
-  }, []);
 
-  const scrollProgress = () => {
-    
-    const scrollTop = document.documentElement.scrollTop;
-    setUserScrollY(scrollTop);
-
-    if( scrollTop < scaleX_1) {
-      setScaleY(scaleY_1);
+  const handleEnable = () => {
+    if (!hasPlayed &&audioRef.current) {
+      audioRef.current.play().then(() => {
+        setHasPlayed(true);
+        console.log("오디오 재생 시작됨");
+      }).catch(err => {
+        console.warn("재생 실패:", err);
+      });
     }
-    else if( scrollTop >= scaleX_2 ){
-      setScaleY(scaleY_2);
+  };
+
+  const handleDisenable = () => {
+    if (hasPlayed &&audioRef.current) {
+      audioRef.current.pause();
+      setHasPlayed(false);
     }
-    else {
-      let y = ( a * scrollTop )+b;
-      setScaleY(y);
-    }
-  }
-
-  const isPc = useMediaQuery({
-    query : "(min-width:1024px)"
-  });
-
-  const isTablet = useMediaQuery({
-    query : "(min-width:768px) and (max-width:1023px)"
-  });
-
-  const isMobile = useMediaQuery({
-    query : "(max-width:767px)"
-  });
-
+  };
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full '>
+      <div className='fixed flex items-center z-50 top-4 pl-4 text-gray-500 text-2xl'>
+        {!hasPlayed && ( <FontAwesomeIcon className='' icon={faCirclePlay} onClick={handleEnable}/>)}
+        {hasPlayed && (<FontAwesomeIcon icon={faCirclePause} onClick={handleDisenable}/>)}
+        <audio ref={audioRef}  loop >
+          <source src={Mp3File} type='audio/mp3' />
+        </audio>
+        <div className='ml-2 fade-message bg-gray-500 text-sm p-2 text-white rounded'> 클릭하시면 배경음악과 같이 즐기실 수 있습니다!</div>
+      </div>
+      
      <Snowfall 
        // Controls the number of snowflakes that are created (default 150)
        snowflakeCount={45}
@@ -79,7 +75,7 @@ function App() {
         // height: '100vh',
       }}
       />
-      <Main scaleY={scaleY}  scrollY={userScrollY}/>
+      <Main />
       {/* {isPc && <Main scaleY={scaleY}  scrollY={userScrollY}/>}
       {isTablet && <p>HI Tablet</p>}
       {isMobile && <Mobile scrollY={userScrollY}/>} */}

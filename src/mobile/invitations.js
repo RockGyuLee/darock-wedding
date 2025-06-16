@@ -21,13 +21,13 @@ import 'swiper/css/navigation';
 import { DaCallModal, Modal, RockCallModal } from "../utils/modal";
 
 const message = [
-  " 2019년 봄, 따뜻한 햇살처럼 설레는 마음으로 저희는 처음 만나 서로에게 조금씩 물들어갔습니다.",
-  "그 후 여섯 번의 봄을 함께 지나며 매 순간을 소중히 여기고 조심스레 사랑을 키워왔습니다.",
-  "그 사랑이 어느새 단단해져 결혼이라는 아름답고 뜻깊은 결실로 이어졌습니다.",
-  "이제 저희는 설렘과 감사의 마음으로 인생의 새로운 시작 앞에 서게 되었습니다.",
-  "따사로운 햇살이 가득한 8월의 어느 날, 가장 소중한 분들을 모시고 저희의 기쁨을 함께 나누고 싶습니다.",
-  "그날의 순간들이 저희 두 사람에게 오래도록 기억될 수 있도록 축복의 마음을 나눠주세요.",
-  "바쁘시더라도 따뜻한 발걸음으로 함께해 주신다면 저희의 첫 걸음을 밝혀주는 큰 기쁨이 될 것입니다."
+  " 처음 만난 봄날, 벚꽃 아래에서 우리는 웃고 있었습니다.",
+  " 그때는 몰랐어요, 그 계절이 일곱 번이나 다시 찾아올 줄은",
+  " 같은 자리에서, 같은 마음으로 늘 서로의 곁을 지켜온 우리.",
+  " 이제 우리는 그 모든 시간의 대답으로 서로의 삶이 되기로 약속하였습니다.",
+  " 일곱번 째 봄을 지나 풍성한 여름 녹음 속에서 부부로써 인연을 이어가려합니다.",
+  " 평생 좋은 친구로, 사랑하는 연인으로 서로 아껴주고 사랑하며 살겠습니다.",
+  " 소중한 여러분을 초대하오니 함께해 주시면 감사하겠습니다."
 ];
 
 
@@ -39,7 +39,7 @@ function convertChat(chat){
     } 
     return chat
 }
-export function Invitations({ scrollY }) {
+export function Invitations() {
     const imageList = [img2019, img2020, img2021, img2022, img2023, img2024, img2025];
 
     const containerRef = useRef(null);
@@ -61,10 +61,6 @@ export function Invitations({ scrollY }) {
     const chatRow = Math.ceil(maxChars / chatCol);
 
     const chatList = chatRow * chatCol;
-
-    const handleCall = (phone_number) => {
-      window.location.href = `tel:${phone_number}`; // 사용자 기기의 전화어플로 연결됨.
-    }
 
     const changeRockModal = (state) => {
       setIsRockModal(state)
@@ -111,6 +107,24 @@ export function Invitations({ scrollY }) {
                                   <img src={img} alt={`Slide ${index}`} className=" object-cover" />
                                 </div>
                                   <section className="px-2 h-1/3 pt-6 absolute bottom-4 w-full flex-col justify-center" >
+                                      {/* {
+                                        Array.from({ length : message[index].length}).map((_, idx) => (
+                                          <span
+                                            key={idx}
+                                            className="text-sm font-bold"
+                                            style={{
+                                              display: 'inline-block',
+                                              border: '1px solid #d12e2e',
+                                              textAlign: 'center',
+                                              width: `${charBoxSize}px`,
+                                              height: `${charBoxSize}px`,
+                                              marginBottom: '0.2rem',
+                                            }}
+                                          >
+                                           {convertChat(message[index][idx])}  
+                                          </span>
+                                        ))
+                                      } */}
                                       {Array.from({ length: chatList }).map((_, idx) => (
                                         <span
                                             key={idx}
