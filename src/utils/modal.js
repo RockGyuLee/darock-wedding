@@ -1,50 +1,63 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
 import { faEnvelope, faPhone, faXmark, faCopy } from "@fortawesome/free-solid-svg-icons";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
+import Img1 from "../img/gallery/IMG_1.jpg"; // 마지막 사진
+import Img2 from "../img/gallery/IMG_2.jpg"; //+
+import img3 from "../img/gallery/IMG_3.jpg"; //+
+import img7 from "../img/gallery/IMG_7.jpg"; //+
+import img8 from "../img/gallery/IMG_8.jpg"; //+
 
-import kakaoPay from "../img/kakaopay/btn_send_tiny.png";
+import img11 from "../img/gallery/IMG_11.jpg"; //+
+import img13 from "../img/gallery/IMG_13.jpg"; //+
+import img14 from "../img/gallery/IMG_14.jpg"; //+
+import img16 from "../img/gallery/IMG_16.jpg"; //+
+import img19 from "../img/gallery/IMG_19.jpg"; //+
+import img20 from "../img/gallery/IMG_20.jpg"; //+
 
-export function Modal({isShow, setIsShow}){
 
-    const handleClick = () => {
-        window.location.href = `https://link.kakaopay.com/_/a7KA7Kl`;
-    }
+// export function Modal({isShow, setIsShow}){
 
-    return (
-        <Dialog open={isShow} onClose={setIsShow} className="relative z-10">
-            <DialogBackdrop
-                transition
-                className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
-            />
+//     const handleClick = () => {
+//         window.location.href = `https://link.kakaopay.com/_/a7KA7Kl`;
+//     }
 
-            <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-                <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
-                <DialogPanel
-                    transition
-                    className="desktop:w-1/2 elative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95"
-                >
-                    <div className="bg-white px-4 pt-2 pb-4 sm:p-6 sm:pb-4">
-                    <div className="sm:flex sm:items-center relative">
-                        <FontAwesomeIcon onClick={()=>setIsShow(false)} icon={faXmark} className="text-gray-400 right-0 absolute cursor-pointer hover:text-purple-400 "/>
-                    </div>
-                    <div>
-                        <div className="mt-4 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                        <DialogTitle as="h3" className="text-base font-semibold text-gray-900">
-                            Deactivate account
-                        </DialogTitle>
-                        <div className="mt-2" onClick={handleClick}>
-                          <img src={kakaoPay}/>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
+//     return (
+//         <Dialog open={isShow} onClose={setIsShow} className="relative z-10">
+//             <DialogBackdrop
+//                 transition
+//                 className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
+//             />
+
+//             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+//                 <div className="flex min-h-full items-center justify-center p-4 text-center sm:items-center sm:p-0">
+//                 <DialogPanel
+//                     transition
+//                     className="desktop:w-1/2 elative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in sm:my-8 sm:w-full sm:max-w-lg data-closed:sm:translate-y-0 data-closed:sm:scale-95"
+//                 >
+//                     <div className="bg-white px-4 pt-2 pb-4 sm:p-6 sm:pb-4">
+//                     <div className="sm:flex sm:items-center relative">
+//                         <FontAwesomeIcon onClick={()=>setIsShow(false)} icon={faXmark} className="text-gray-400 right-0 absolute cursor-pointer hover:text-purple-400 "/>
+//                     </div>
+//                     <div>
+//                         <div className="mt-4 text-center sm:mt-0 sm:ml-4 sm:text-left">
+//                         <DialogTitle as="h3" className="text-base font-semibold text-gray-900">
+//                             Deactivate account
+//                         </DialogTitle>
+//                         <div className="mt-2" onClick={handleClick}>
+//                           <img src={kakaoPay}/>
+//                         </div>
+//                         </div>
+//                     </div>
+//                     </div>
                    
-                </DialogPanel>
-                </div>
-            </div>
-    </Dialog>
-    )
-}
+//                 </DialogPanel>
+//                 </div>
+//             </div>
+//     </Dialog>
+//     )
+// }
 
 export function RockCallModal({isShow, setIsShow}){
 
@@ -173,8 +186,8 @@ export function RockCallModal({isShow, setIsShow}){
                                     <div className="col-span-3 ">
                                         <div className="flex justify-center">
                                             <div className="  pt-2 px-2 flex justify-center ">
-                                                <DialogTitle className=" mt-2 text-xs font-semibold text-gray-600 " onClick={copy2Clipboard}>
-                                                    국민은행-67270201422761
+                                                <DialogTitle className=" mt-2 text-xs font-semibold text-gray-600 " onClick={copy2Clipboard.bind(null, "전북은행 547210389346")}>
+                                                    전북은행-547210389346
                                                     <FontAwesomeIcon className="pl-2" icon={faCopy} size="xl"/>
                                                 </DialogTitle>
                                             </div>
@@ -192,7 +205,6 @@ export function RockCallModal({isShow, setIsShow}){
 }
 
 export function DaCallModal({isShow, setIsShow}){
-
 
     const move2DaKakaopay = () => {
         window.location.href = `https://link.kakaopay.com/_/9-LrPOl`;
@@ -259,7 +271,7 @@ export function DaCallModal({isShow, setIsShow}){
                                     <div className="col-span-3 border-b pb-2 border-gray-300">
                                         <div className="flex justify-center">
                                             <div className="  pt-2 px-2 flex justify-center ">
-                                                <div className=" mt-2 text-xs font-semibold text-gray-600 flex flex-col" onClick={copy2Clipboard}>
+                                                <div className=" mt-2 text-xs font-semibold text-gray-600 flex flex-col" onClick={copy2Clipboard.bind(null, "국민은행 3510826586663")}>
                                                     농협-3510826586663
                                                     <FontAwesomeIcon className="pl-2" icon={faCopy} size="xl"/>
                                                 </div>
@@ -295,8 +307,8 @@ export function DaCallModal({isShow, setIsShow}){
                                     <div className="col-span-3 border-b pb-2 border-gray-300">
                                         <div className="flex justify-center">
                                             <div className="  pt-2 px-2 flex justify-center ">
-                                                <DialogTitle className=" mt-2 text-xs font-semibold text-gray-600 " onClick={copy2Clipboard}>
-                                                    국민은행-67270201422761
+                                                <DialogTitle className=" mt-2 text-xs font-semibold text-gray-600 " onClick={copy2Clipboard.bind(null, "국민은행 50181251012358")}>
+                                                    농협-50181251012358
                                                     <FontAwesomeIcon className="pl-2" icon={faCopy} size="xl"/>
                                                 </DialogTitle>
                                             </div>
@@ -317,8 +329,8 @@ export function DaCallModal({isShow, setIsShow}){
                                     <div className="col-span-3 ">
                                         <div className="flex justify-center">
                                             <div className="  pt-2 px-2 flex justify-center ">
-                                                <DialogTitle className=" mt-2 text-xs font-semibold text-gray-600 " onClick={copy2Clipboard}>
-                                                    국민은행-67270201422761
+                                                <DialogTitle className=" mt-2 text-xs font-semibold text-gray-600 " onClick={copy2Clipboard.bind(null, "국민은행 50102052145462")}>
+                                                    농협-50102052145462
                                                     <FontAwesomeIcon className="pl-2" icon={faCopy} size="xl"/>
                                                 </DialogTitle>
                                             </div>
@@ -326,6 +338,74 @@ export function DaCallModal({isShow, setIsShow}){
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </DialogPanel>
+                </div>
+            </div>
+    </Dialog>
+    )
+}
+
+export function GalleryModal({isShow, setIsShow}){
+
+    const images = [
+        {
+            original: Img1,
+            thumbnail: Img1,
+        },
+        {
+            original: Img2,
+            thumbnail: Img2,
+        },
+        {
+            original: img3,
+            thumbnail: img3,
+        },
+        {
+            original: img7,
+            thumbnail: img7,
+        },
+        {
+            original: img8,
+            thumbnail: img8,
+        },
+        {
+            original: img11,
+            thumbnail: img11,
+        },
+        {
+            original: img13,
+            thumbnail: img13,
+        },
+        {
+            original: img14,
+            thumbnail: img14,
+        },
+        {
+            original: img16,
+            thumbnail: img16,
+        },
+    ];
+
+    return (
+        <Dialog open={isShow} onClose={setIsShow} className="relative z-30">
+            <DialogBackdrop
+                transition
+                className="fixed inset-0 bg-gray-500/75 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
+            />
+            <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                <div className="flex min-h-full items-center justify-center p-4 text-center mobile:w-full mobile:items-center mobile:p-0">
+                <DialogPanel
+                    transition
+                    className="desktop:w-2/3 mobile:w-full mobile:mx-4 relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all data-closed:translate-y-4 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in mobile:my-8 mobile:max-w-lg data-closed:mobile:translate-y-0 data-closed:mobile:scale-95"
+                >   
+                    <div className="bg-white px-4 pt-2 pb-4  mobile:p-6 mobile:pb-4 flex flex-col ">
+                        <div className="mobile:flex mobile:items-center relative">
+                            <FontAwesomeIcon onClick={()=>setIsShow(false)} icon={faXmark} className="text-gray-400 right-0 absolute cursor-pointer hover:text-purple-400 "/>
+                        </div>
+                        <div className="h-sc">
+                            <ImageGallery items={images} />
                         </div>
                     </div>
                 </DialogPanel>

@@ -9,11 +9,20 @@ import img2025 from "../img/scrollImg/2025.jpeg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
+import img2022Xs from "../img/scroll_img/2022/2022_xs.jpg";
+import img2022Sm from "../img/scroll_img/2022/2022_sm.jpg";
+import img2022Lg from "../img/scroll_img/2022/2022_lg.jpg";
+
+import img2024Xs from "../img/scroll_img/2024/2024_xs.jpg";
+import img2024Sm from "../img/scroll_img/2024/2024_sm.jpg";
+import img2024Lg from "../img/scroll_img/2024/2024_lg.jpg";
+
+import img2025Xs from "../img/scroll_img/2025/2025_xs.jpg";
+import img2025Sm from "../img/scroll_img/2025/2025_sm.jpg";
+import img2025Lg from "../img/scroll_img/2025/2025_lg.jpg";
+
 import rockgyu from "../img/personal/rock.jpeg";
 import dayeon from "../img/personal/dayeon.jpeg";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -107,24 +116,6 @@ export function Invitations() {
                                   <img src={img} alt={`Slide ${index}`} className=" object-cover" />
                                 </div>
                                   <section className="px-2 h-1/3 pt-6 absolute bottom-4 w-full flex-col justify-center" >
-                                      {/* {
-                                        Array.from({ length : message[index].length}).map((_, idx) => (
-                                          <span
-                                            key={idx}
-                                            className="text-sm font-bold"
-                                            style={{
-                                              display: 'inline-block',
-                                              border: '1px solid #d12e2e',
-                                              textAlign: 'center',
-                                              width: `${charBoxSize}px`,
-                                              height: `${charBoxSize}px`,
-                                              marginBottom: '0.2rem',
-                                            }}
-                                          >
-                                           {convertChat(message[index][idx])}  
-                                          </span>
-                                        ))
-                                      } */}
                                       {Array.from({ length: chatList }).map((_, idx) => (
                                         <span
                                             key={idx}
@@ -195,7 +186,6 @@ export function Invitations() {
           </div>
         </div>
         </div>
-        {/* <Modal isShow={isShowCallModal} setIsShow={setIsCallModal}/> */}
       </Fragment>
     
   );

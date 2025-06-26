@@ -7,7 +7,8 @@ import Snowfall from 'react-snowfall';
 
 import loveBlossomeImg from "./img/petal.png";
 
-import Mp3File from "./mp3/the-wires.mp3";
+import BgmJoy from "./mp3/joy-JeTaime.mp3";
+
 // mobile
 import { Mobile } from './mobile/mobile';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -56,7 +57,7 @@ function App() {
         {!hasPlayed && ( <FontAwesomeIcon className='' icon={faCirclePlay} onClick={handleEnable}/>)}
         {hasPlayed && (<FontAwesomeIcon icon={faCirclePause} onClick={handleDisenable}/>)}
         <audio ref={audioRef}  loop >
-          <source src={Mp3File} type='audio/mp3' />
+          <source src={BgmJoy} type='audio/mp3' />
         </audio>
         <div className='ml-2 fade-message bg-gray-500 text-sm p-2 text-white rounded'> 클릭하시면 배경음악과 같이 즐기실 수 있습니다!</div>
       </div>
