@@ -9,7 +9,7 @@ export function PhotoBooth(){
                     안내
                 </div>
             </div>
-            <div className="py-2">
+            <div className="py-2 pb-16">
                 <div className=" w-full flex justify-center ">
                     <img style={{
                         width : "80%"

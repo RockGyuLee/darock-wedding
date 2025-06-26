@@ -1,20 +1,52 @@
 
-import Img1 from "../img/gallery/IMG_1.jpg"; // 마지막 사진
-import Img2 from "../img/gallery/IMG_2.jpg"; //+
-import img3 from "../img/gallery/IMG_3.jpg"; //+
-import img7 from "../img/gallery/IMG_7.jpg"; //+
-import img8 from "../img/gallery/IMG_8.jpg"; //+
+import img1_lg from "../img/gallery1/IMG_1_lg.jpg";
+import img1_sm from "../img/gallery1/IMG_1_sm.jpg";
+import img1_xs from "../img/gallery1/IMG_1_xs.jpg";
 
-import img11 from "../img/gallery/IMG_11.jpg"; //+
-import img13 from "../img/gallery/IMG_13.jpg"; //+
-import img14 from "../img/gallery/IMG_14.jpg"; //+
-import img16 from "../img/gallery/IMG_16.jpg"; //+
-import img19 from "../img/gallery/IMG_19.jpg"; //+
-import img20 from "../img/gallery/IMG_20.jpg"; //+
-import img21 from "../img/gallery/IMG_21.jpg"; //+
-import img25 from "../img/gallery/IMG_25.jpg"; //+
-import img29 from "../img/gallery/IMG_29.jpg"; //+
-import img30 from "../img/gallery/IMG_30.jpg"; //+
+import img2_lg from "../img/gallery1/IMG_2_lg.jpg";
+import img2_sm from "../img/gallery1/IMG_2_sm.jpg";
+import img2_xs from "../img/gallery1/IMG_2_xs.jpg";
+
+import img3_lg from "../img/gallery1/IMG_3_lg.jpg";
+import img3_sm from "../img/gallery1/IMG_3_sm.jpg";
+import img3_xs from "../img/gallery1/IMG_3_xs.jpg";
+
+import img4_lg from "../img/gallery1/IMG_8_lg.jpg";
+import img4_sm from "../img/gallery1/IMG_8_sm.jpg";
+import img4_xs from "../img/gallery1/IMG_8_xs.jpg";
+
+import img5_lg from "../img/gallery1/IMG_2916.JPG";
+import img5_sm from "../img/gallery1/IMG_2916.JPG";
+import img5_xs from "../img/gallery1/IMG_2916.JPG";
+
+import img6_lg from "../img/gallery1/IMG_13_lg.jpg";
+import img6_sm from "../img/gallery1/IMG_13_sm.jpg";
+import img6_xs from "../img/gallery1/IMG_13_xs.jpg";
+
+import img7_lg from "../img/gallery1/IMG_14_lg.jpg";
+import img7_sm from "../img/gallery1/IMG_14_sm.jpg";
+import img7_xs from "../img/gallery1/IMG_14_xs.jpg";
+
+import img8_lg from "../img/gallery1/IMG_11_lg.jpg";
+import img8_sm from "../img/gallery1/IMG_11_sm.jpg";
+import img8_xs from "../img/gallery1/IMG_11_xs.jpg";
+
+import img9_lg from "../img/gallery1/IMG_2924.JPG";
+import img9_sm from "../img/gallery1/IMG_2924.JPG";
+import img9_xs from "../img/gallery1/IMG_2924.JPG";
+
+import img10_lg from "../img/gallery1/IMG_20_lg.jpg";
+import img10_sm from "../img/gallery1/IMG_20_sm.jpg";
+import img10_xs from "../img/gallery1/IMG_20_xs.jpg";
+
+import img11_lg from "../img/gallery1/IMG_16_lg.jpg";
+import img11_sm from "../img/gallery1/IMG_16_sm.jpg";
+import img11_xs from "../img/gallery1/IMG_16_xs.jpg";
+
+import img12_lg from "../img/gallery1/IMG_2926.JPG";
+import img12_sm from "../img/gallery1/IMG_2926.JPG";
+import img12_xs from "../img/gallery1/IMG_2926.JPG";
+
 import 'react-photo-view/dist/react-photo-view.css';
 
 
@@ -324,7 +356,22 @@ function PhotoMozic1({scrollY, isSticky}){
     
     const [startScroll, setStartScroll ] = useState(0);
     const [ isGalleryModal, setIsGalleryModal ]  = useState(false);
-    const imageList = [Img1,Img2,img3,img7,img8,img11,img13,img14,img16,img21,img29,img30]
+    // const imageList = [Img1,Img2,img3,img7,img8,img11,img13,img14,img16,];
+
+    const galleryImages = [
+        [img1_lg, img1_sm, img1_xs],
+        [img2_lg, img2_sm, img2_xs],
+        [img3_lg, img3_sm, img3_xs],
+        [img4_lg, img4_sm, img4_xs],
+        [img5_lg, img5_sm, img5_xs],
+        [img6_lg, img6_sm, img6_xs],
+        [img7_lg, img7_sm, img7_xs],
+        [img8_lg, img8_sm, img8_xs],
+        [img9_lg, img9_sm, img9_xs],
+        [img10_lg, img10_sm, img10_xs],
+        [img11_lg, img11_sm, img11_xs],
+        [img12_lg, img12_sm, img12_xs],
+    ];
 
     const handleShowModal = () => {
         setIsGalleryModal(true)
@@ -335,10 +382,15 @@ function PhotoMozic1({scrollY, isSticky}){
             <PhotoProvider>
                 <div className="grid grid-cols-3 grid-rows-4" onClick={()=>handleShowModal(true)}>
                     {
-                        imageList.map(( item, idx) => (
-                            <PhotoView key={idx} src={item}>
-                                <img src={item} alt="" />
-                            </PhotoView>
+                        galleryImages.map(( item, idx) => (
+                            <PhotoView key={idx} src={item[0]}>
+                                <picture>
+                                    <source media={"(max-width:480px)"} srcSet={item[2]}/>
+                                    <source media={"(max-width:734px)"} srcSet={item[1]}/>
+                                    <source media={"(max-width:1440px)"} srcSet={item[0]}/>
+                                    <img src={item[0]}/>
+                                </picture>
+                           </PhotoView>
                         ))
                     }
                 </div>
