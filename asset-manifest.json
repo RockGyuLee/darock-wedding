@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/darock-wedding/static/css/main.315e3809.css",
-    "main.js": "/darock-wedding/static/js/main.c1675c9d.js",
+    "main.css": "/darock-wedding/static/css/main.21ead7a3.css",
+    "main.js": "/darock-wedding/static/js/main.ef352b09.js",
     "static/media/IMG_13.jpg": "/darock-wedding/static/media/IMG_13.70e7e4d1441a5cc6424a.jpg",
     "static/media/IMG_11.jpg": "/darock-wedding/static/media/IMG_11.7b2b2c0702811f3af17d.jpg",
     "static/media/IMG_16.jpg": "/darock-wedding/static/media/IMG_16.bbe2682597fefa2fc40c.jpg",
@@ -19,6 +19,7 @@
     "static/media/2024.jpeg": "/darock-wedding/static/media/2024.54ee2f419bfbba4b57be.jpeg",
     "static/media/2022.jpeg": "/darock-wedding/static/media/2022.9ce3bb4f4e67a925b87b.jpeg",
     "static/media/photobooth.png": "/darock-wedding/static/media/photobooth.2ba3f6351744843c9188.png",
+    "static/media/mosaic.JPG": "/darock-wedding/static/media/mosaic.fd6f74ec57dcab36ca3c.JPG",
     "static/media/IMG_11_lg.jpg": "/darock-wedding/static/media/IMG_11_lg.cc6617b88e03c4e14b3e.jpg",
     "static/media/2024_lg.jpg": "/darock-wedding/static/media/2024_lg.bd7fe8471ab245a7f9c1.jpg",
     "static/media/end_photo.png": "/darock-wedding/static/media/end_photo.935a1dee2d7f79c90b49.png",
@@ -69,11 +70,11 @@
     "static/media/IMG_1_xs.jpg": "/darock-wedding/static/media/IMG_1_xs.f17835b8f68bb894710e.jpg",
     "static/media/IMG_13_xs.jpg": "/darock-wedding/static/media/IMG_13_xs.fcdc8095e260d0944097.jpg",
     "index.html": "/darock-wedding/index.html",
-    "main.315e3809.css.map": "/darock-wedding/static/css/main.315e3809.css.map",
-    "main.c1675c9d.js.map": "/darock-wedding/static/js/main.c1675c9d.js.map"
+    "main.21ead7a3.css.map": "/darock-wedding/static/css/main.21ead7a3.css.map",
+    "main.ef352b09.js.map": "/darock-wedding/static/js/main.ef352b09.js.map"
   },
   "entrypoints": [
-    "static/css/main.315e3809.css",
-    "static/js/main.c1675c9d.js"
+    "static/css/main.21ead7a3.css",
+    "static/js/main.ef352b09.js"
   ]
 }
