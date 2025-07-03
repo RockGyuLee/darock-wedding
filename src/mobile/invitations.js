@@ -66,10 +66,14 @@ export function Invitations() {
     const charBoxSize = 24;
     const maxChars = Math.max(...message.map(m => m.length));
 
+
     const chatCol = parseInt((divWidth -16) / charBoxSize);
     const chatRow = Math.ceil(maxChars / chatCol);
 
     const chatList = chatRow * chatCol;
+
+    console.log("test",...message.map(m => m.length), chatCol, chatRow )
+
 
     const changeRockModal = (state) => {
       setIsRockModal(state)

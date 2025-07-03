@@ -109,13 +109,25 @@ export function Location() {
                 <div className=" pt-2 pl-2 text-xs">
                 전주 고속터미널 하차 더케이 웨딩홀까지 도보 15분 소요 / 택시 기본요금
                 </div>
+                <div className=" pt-2 pl-2 text-xs flex">
+                    <div className="font-bold pr-1">하차 후</div> 시내 버스 이용 : 전주 고속 버스 터미널 정류장 승차(200, 102), 이마트 정류장 하차
+                </div>
+                <div className=" pt-2 pl-2 text-xs">
+                도보로 4분 소요 예상
+                </div>
             </div>
             <div className="flex flex-col py-2">
                 <div className="border-b outline-offset-4">
                     🚆 ktx 이용 시
                 </div>
                 <div className=" pt-2 pl-2 text-xs">
-                전주역에서 하차 택시 이용
+                전주역에서 하차 택시 이용 / 택시 요금 : 6500원 예상
+                </div>
+                <div className=" pt-2 pl-2 text-xs flex">
+                    <div className="font-bold pr-1">하차 후</div> 시내 버스 이용 : 동부대로 전주역 터미널 정류장 승차(200), 이마트 정류장 하차
+                </div>
+                <div className=" pt-2 pl-2 text-xs">
+                도보로 4분 소요 예상
                 </div>
             </div>
         </div>

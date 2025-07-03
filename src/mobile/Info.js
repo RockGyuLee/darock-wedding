@@ -17,9 +17,11 @@ export function PhotoBooth(){
 
                 </div>
                 <div className="flex flex-col w-full justify-center px-16">
-                     <div className="text-sm pt-4 py-2">
-                        가장 기쁘고 빛나는 결혼식에 참석해주신
-                        하객분들을 위해 포토부스가 로비에 설치 될 예정입니다.
+                     <div className="text-sm pt-4">
+                        가장 기쁘고 빛나는 결혼식에 참석해주신 하객분들을 위해 
+                    </div>
+                    <div className="text-sm">
+                        포토부스가 로비에 설치 될 예정입니다.
                     </div>
                     <div className="text-sm py-2">
                         즉석에서 촬영된 사진 2매가 인화되어
