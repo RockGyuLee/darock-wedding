@@ -43,7 +43,7 @@ export function Main({ }){
                     <div className="grid grid-rows-5 h-screen">
                         <div className="row-span-1 w-full flex-col font-bold flex items-center justify-center ">
                             {/*   absolute items-center justify-center top-10 font-bold text-2xl */}
-                                <div className="flex justify-start pr-2 text-3xl">
+                                <div className="flex justify-center text-3xl">
                                     락규♥다연
                                 </div>
                                 <div className=" text-xl">

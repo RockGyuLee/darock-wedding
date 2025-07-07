@@ -103,10 +103,10 @@ export function WeddingGallery({scrollY}){
         <div className=" z-20 relative bg-white w-full pt-8">
             <div className="flex flex-col">
                 <div className="flex justify-center text-3xl text-orange-500 font-bold pb-4">
-                    웨딩 갤러리
+                    추억이 모여 지금의 우리를 만들다
                 </div>
                 <p className={'text-gray-400'} style={{ textAlign: "center", whiteSpace: "pre-wrap" }}>
-                    여러 사진의 조각들이 모여 우리를 만들다.
+                    천천히 아래로 스크롤하면 사진이 보여요.
                 </p>
             </div>
             <div ref={sentinelRef} className="sentinel h-[1px]" />
@@ -115,9 +115,7 @@ export function WeddingGallery({scrollY}){
                     <PhotoMozic scrollY={scrollY} isSticky={isSticky} />
                 </header>
             </div>
-             <div className=' pb-4'>
-                {/* <PhotoMozic1 scrollY={scrollY} isSticky={isSticky} /> */}
-            </div>
+             
         </div>
     )
 }
@@ -150,6 +148,10 @@ function changeTranslateY(y) {
   return (-2500 / 17) * y + (2500 / 17);
 }
 
+// filter blur 처리 함수 0.5에서 10, 1에서 1
+function getFilterBlur(x) {
+  return -18 * x + 18;
+}
 
 function PhotoMozic({scrollY, isSticky}){
     
@@ -197,17 +199,16 @@ function PhotoMozic({scrollY, isSticky}){
                     opacity : getValue3(zoom),
                     objectFit : 'cover',
                     transform : `matrix(${zoom},0,0,${zoom},${changeTranslateX(zoom)},${changeTranslateY(zoom)})`,
-                    // transform: `scale(${zoom})`,
                     transformOrigin: "center center",  // 줌인/줌아웃의 기준을 이미지 중앙으로 설정
                 }}
             />
              <PhotoProvider>
                 <div className="w-screen h-screen grid grid-cols-3 grid-rows-4 z-10" 
-                style={{
-                    opacity : getValue(zoom),
-                    transform : `scale(${chagneScaleGrid(zoom)})`,
-                    // filter : `brightness(${chagneScaleGrid(zoom) * 100}%)`
-                }}>
+                    style={{
+                        opacity : getValue(zoom),
+                        filter: `blur(${getFilterBlur(getValue(zoom),)}px)`,  
+                    }}
+                >
                     {
                         galleryImages.map(( item, idx) => (
                             <PhotoView key={idx} src={item[0]}>
@@ -222,9 +223,11 @@ function PhotoMozic({scrollY, isSticky}){
                     }
                 </div>
             </PhotoProvider>
-            <div className="absolute bottom-10 font-bold text-lg flex justify-center w-full text-violet-500 z-20" style={{
+            <div className="absolute bottom-10 font-bold text-lg flex justify-center w-full text-white z-20" style={{
                 opacity : getValue(zoom) == 1 ? 1 : 0
-            }}>사진을 클릭하시면 확대보기가 가능합니다. </div>
+            }}>
+                사진을 클릭하시면 확대보기가 가능합니다. 
+            </div>
         </div>
     )
 }

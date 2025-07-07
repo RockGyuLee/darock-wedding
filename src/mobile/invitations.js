@@ -9,18 +9,6 @@ import img2025 from "../img/scrollImg/2025.jpeg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 
-import img2022Xs from "../img/scroll_img/2022/2022_xs.jpg";
-import img2022Sm from "../img/scroll_img/2022/2022_sm.jpg";
-import img2022Lg from "../img/scroll_img/2022/2022_lg.jpg";
-
-import img2024Xs from "../img/scroll_img/2024/2024_xs.jpg";
-import img2024Sm from "../img/scroll_img/2024/2024_sm.jpg";
-import img2024Lg from "../img/scroll_img/2024/2024_lg.jpg";
-
-import img2025Xs from "../img/scroll_img/2025/2025_xs.jpg";
-import img2025Sm from "../img/scroll_img/2025/2025_sm.jpg";
-import img2025Lg from "../img/scroll_img/2025/2025_lg.jpg";
-
 import rockgyu from "../img/personal/rock.jpeg";
 import dayeon from "../img/personal/dayeon.jpeg";
 
@@ -38,8 +26,6 @@ const message = [
   " 평생 좋은 친구로, 사랑하는 연인으로 서로 아껴주고 사랑하며 살겠습니다.",
   " 소중한 여러분을 초대하오니 함께해 주시면 감사하겠습니다."
 ];
-
-
 
 function convertChat(chat){
 
@@ -70,10 +56,12 @@ export function Invitations() {
     const chatCol = parseInt((divWidth -16) / charBoxSize);
     const chatRow = Math.ceil(maxChars / chatCol);
 
+    const chatRowList = message.map(m => Math.ceil(m.length / chatCol));
+
+    console.log("test", chatRowList )
+
+    
     const chatList = chatRow * chatCol;
-
-    console.log("test",...message.map(m => m.length), chatCol, chatRow )
-
 
     const changeRockModal = (state) => {
       setIsRockModal(state)
@@ -91,7 +79,7 @@ export function Invitations() {
                   소중한 분들을 초대합니다
               </div>
               <div className="flex justify-center text-gray-400 text-xs border-b-2 pb-2">
-                  우측으로 스크롤하면 이야기를 읽을 수 있어요.
+                  우측으로 스크롤하면 우리의 이야기가 시작됩니다.
               </div>
           </div>
           <div className="w-full items-center pt-2">
@@ -120,7 +108,8 @@ export function Invitations() {
                                   <img src={img} alt={`Slide ${index}`} className=" object-cover" />
                                 </div>
                                   <section className="px-2 h-1/3 pt-6 absolute bottom-4 w-full flex-col justify-center" >
-                                      {Array.from({ length: chatList }).map((_, idx) => (
+                                      
+                                      {Array.from({ length: chatRowList[index] * chatCol }).map((_, idx) => (
                                         <span
                                             key={idx}
                                             className="text-sm font-bold"

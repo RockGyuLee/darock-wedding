@@ -9,8 +9,6 @@ import loveBlossomeImg from "./img/petal.png";
 
 import BgmJoy from "./mp3/joy-JeTaime.mp3";
 
-// mobile
-import { Mobile } from './mobile/mobile';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePause, faCirclePlay } from '@fortawesome/free-solid-svg-icons';
 
@@ -63,26 +61,17 @@ function App() {
       </div>
       
      <Snowfall 
-       // Controls the number of snowflakes that are created (default 150)
        snowflakeCount={45}
        speed={[0.5, 0.8]}
-       // Pass in the images to be used
        images={[loveBlossome]}
        radius={[8, 10]}
        style={{
-        zIndex: '10',
-        position: 'fixed',
-        // width: '100vw',
-        // height: '100vh',
-      }}
+          zIndex: '10',
+          position: 'fixed',
+        }}
       />
       <Main />
-      {/* {isPc && <Main scaleY={scaleY}  scrollY={userScrollY}/>}
-      {isTablet && <p>HI Tablet</p>}
-      {isMobile && <Mobile scrollY={userScrollY}/>} */}
-      
-      {/* <Main scaleY={scaleY}  scrollY={userScrollY}/> */}
-      {/* <Main scaleY={scaleY}  scrollY={userScrollY}/> */}
+    
     </div>
   );
 }
