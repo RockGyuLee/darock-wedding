@@ -102,8 +102,13 @@ export function WeddingGallery({scrollY}){
     return (
         <div className=" z-20 relative bg-white w-full pt-8">
             <div className="flex flex-col">
-                <div className="flex justify-center text-3xl text-orange-500 font-bold pb-4">
-                    추억이 모여 지금의 우리를 만들다
+                <div className="flex flex-col justify-center text-3xl text-orange-500 font-bold pb-4">
+                    <div className="flex justify-center">
+                        추억이 모여 지금의
+                    </div>
+                    <div className="flex justify-center">
+                        우리를 만들다
+                    </div>
                 </div>
                 <p className={'text-gray-400'} style={{ textAlign: "center", whiteSpace: "pre-wrap" }}>
                     천천히 아래로 스크롤하면 사진이 보여요.
